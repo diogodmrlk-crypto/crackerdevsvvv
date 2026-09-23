@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TERRA DA GAROA CRACKERS</title>
-
 <style>
 * {
     margin: 0;
@@ -13,7 +11,6 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
-
 body {
     background: #000;
     height: 100vh;
@@ -22,7 +19,6 @@ body {
     align-items: center;
     color: white;
 }
-
 /* TELA DE ABERTURA */
 #intro {
     position: fixed;
@@ -37,20 +33,16 @@ body {
     z-index: 99999;
     text-align: center;
 }
-
 #intro h1 {
     font-size: 32px;
     color: #fff;
     text-shadow: 0 0 10px #fff, 0 0 25px #fff;
-    animation: aparecer 0.8s ease;
 }
-
 #intro p {
     margin-top: 12px;
     color: #aaa;
     font-size: 14px;
 }
-
 #barra {
     width: 70%;
     max-width: 300px;
@@ -60,7 +52,6 @@ body {
     margin-top: 25px;
     overflow: hidden;
 }
-
 #progresso {
     width: 0%;
     height: 100%;
@@ -68,23 +59,10 @@ body {
     box-shadow: 0 0 10px #fff;
     animation: carregar 3s linear forwards;
 }
-
 @keyframes carregar {
     from { width: 0%; }
     to { width: 100%; }
 }
-
-@keyframes aparecer {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
 /* TELA DE SENHA */
 #loginBox {
     background: #111;
@@ -96,12 +74,10 @@ body {
     border: 1px solid #fff;
     box-shadow: 0 0 12px #fff;
 }
-
 #loginBox h2 {
     margin-bottom: 15px;
     text-shadow: 0 0 10px #fff;
 }
-
 #senhaInput {
     width: 100%;
     padding: 12px;
@@ -113,7 +89,6 @@ body {
     text-align: center;
     font-size: 16px;
 }
-
 #btnEntrar {
     width: 100%;
     padding: 12px;
@@ -126,15 +101,13 @@ body {
     box-shadow: 0 0 10px #fff;
     font-size: 16px;
 }
-
 #erroSenha {
     margin-top: 10px;
     color: red;
     display: none;
     font-weight: bold;
 }
-
-/* PAINEL PRINCIPAL */
+/* PAINEL */
 .container {
     display: none;
     background: #111;
@@ -145,20 +118,17 @@ body {
     border: 1px solid #fff;
     text-align: center;
 }
-
 h1 {
     font-size: 26px;
     margin-bottom: 20px;
     color: #fff;
     text-shadow: 0 0 10px #fff;
 }
-
 .btn-group {
     display: flex;
     justify-content: space-between;
     margin-bottom: 25px;
 }
-
 .btn {
     width: 48%;
     padding: 12px;
@@ -170,20 +140,17 @@ h1 {
     cursor: pointer;
     box-shadow: 0 0 10px #fff;
 }
-
 .btn.gray {
     background: #000;
     border: 1px solid #fff;
     color: #fff;
     box-shadow: none;
 }
-
 .check-group {
     text-align: left;
     margin-top: 10px;
     color: #fff;
 }
-
 .check-group label {
     display: flex;
     justify-content: space-between;
@@ -191,7 +158,6 @@ h1 {
     margin: 10px 0;
     font-size: 16px;
 }
-
 input[type="checkbox"] {
     width: 20px;
     height: 20px;
@@ -200,31 +166,25 @@ input[type="checkbox"] {
     background: #000;
     border-radius: 4px;
     cursor: pointer;
-    transition: 0.2s;
 }
-
 input[type="checkbox"].ativo {
     background: red;
     border-color: red;
     box-shadow: 0 0 8px red;
 }
-
 .status {
     font-size: 14px;
     color: #00ff55;
     font-weight: bold;
     display: none;
 }
-
 .status.ativo {
     display: inline;
 }
-
 .slider {
     width: 100%;
     margin: 20px 0;
 }
-
 select {
     width: 100%;
     padding: 12px;
@@ -233,14 +193,11 @@ select {
     background: #000;
     color: #fff;
     font-weight: bold;
-    cursor: pointer;
 }
-
 .radio-group {
     text-align: left;
     margin-top: 20px;
 }
-
 .inject-btn {
     width: 100%;
     padding: 15px;
@@ -254,76 +211,78 @@ select {
     color: #000;
     box-shadow: 0 0 15px #fff;
 }
-
 a {
     color: #fff;
     text-decoration: underline;
 }
 </style>
-
 </head>
-
 <body>
-
-<!-- AVISO DE 3 SEGUNDOS -->
-
+<!-- AVISO -->
 <div id="intro">
     <h1>TERRA DA GAROA CRACKER</h1>
     <p>Redirecionando para nosso Discord...</p>
-
 <div id="barra">
     <div id="progresso"></div>
 </div>
-
 </div>
-
-<!-- TELA DE SENHA -->
-
+<!-- LOGIN -->
 <div id="loginBox">
-    <h2>Digite a senha</h2>
-
-<div style="position: relative; width: 100%;">
-    <input type="password" id="senhaInput" placeholder="Senha de acesso">
-
+<h2>Digite a senha</h2>
+<div style="position:relative;width:100%;">
+    <input
+        type="password"
+        id="senhaInput"
+        placeholder="Senha de acesso"
+    >
     <span id="toggleSenha"
-          style="position:absolute; right:10px; top:50%;
-          transform:translateY(-50%);
-          cursor:pointer; font-size:18px; color:#fff;
-          user-select:none;">
+        style="
+        position:absolute;
+        right:10px;
+        top:50%;
+        transform:translateY(-50%);
+        cursor:pointer;
+        font-size:18px;
+        color:#fff;
+        user-select:none;">
         👁️
     </span>
 </div>
-
 <button id="btnEntrar">Entrar</button>
 <p id="erroSenha">Senha incorreta!</p>
-
 </div>
-
-<!-- PAINEL PRINCIPAL -->
-
+<!-- PAINEL -->
 <div class="container" id="painel">
-
 <h1>Im🇧🇷noTx-tm</h1>
-
 <div class="btn-group">
-    <button class="btn">OPÇÕES DO AUXÍLIO</button>
-    <button class="btn gray">INFO criador @Im🇧🇷noTx-tm</button>
+    <button class="btn">
+        OPÇÕES DO AUXÍLIO
+    </button>
+    <button class="btn gray">
+        INFO criador @Im🇧🇷noTx-tm
+    </button>
 </div>
-
 <div class="check-group">
     <label>
-        <span><input type="checkbox" id="c1"> No recoil AIM</span>
-        <span class="status" id="s1">Ativado</span>
+        <span>
+            <input type="checkbox" id="c1">
+            No recoil AIM
+        </span>
+        <span class="status" id="s1">
+            Ativado
+        </span>
     </label>
-
     <label>
-        <span><input type="checkbox" id="c2"> Headtracker AIM</span>
-        <span class="status" id="s2">Ativado</span>
+        <span>
+            <input type="checkbox" id="c2">
+            Headtracker AIM
+        </span>
+        <span class="status" id="s2">
+            Ativado
+        </span>
     </label>
 </div>
-
 <input type="range" class="slider">
-
 <select>
     <option>Auxílio 50%</option>
     <option>Auxílio 60%</option>
@@ -332,148 +291,119 @@ a {
     <option>Auxílio 90%</option>
     <option>Auxílio 100%</option>
 </select>
-
 <div class="radio-group">
     <p>Tipo de Auxílio de mira:</p>
-    <label><input type="radio" name="aim"> Ao Atirar</label>
-    <label><input type="radio" name="aim"> Ao Olhar boneco</label>
+    <label>
+        <input type="radio" name="aim">
+        Ao Atirar
+    </label>
+    <label>
+        <input type="radio" name="aim">
+        Ao Olhar boneco
+    </label>
 </div>
-
 <button class="inject-btn" onclick="abrirFFNormal()">
     ABRIR FREE FIRE
 </button>
-
 <button class="inject-btn" onclick="abrirFFMax()">
     ABRIR FREE FIRE MAX
 </button>
-
-<p style="margin-top: 15px;">
+<p style="margin-top:15px;">
     Se não abrir automaticamente,
     <a href="#" onclick="abrirFFNormal()">
         clique aqui para abrir o Free Fire.
     </a>
 </p>
-
 </div>
-
 <script>
-
-/* ================================
-   AVISO + REDIRECIONAMENTO DISCORD
-================================ */
-
-setTimeout(function() {
-
-    window.location.href = "https://discord.gg/W7yq8xCvsm";
-
-}, 3000);
-
-
-/* ================================
-   SISTEMA DE SENHA
-================================ */
-
-document.getElementById("btnEntrar").addEventListener("click", function () {
-
-    const senhaDigitada =
-        document.getElementById("senhaInput").value;
-
-    const senhaCorreta = "TERRADAGAROA";
-
-    if (senhaDigitada === senhaCorreta) {
-
-        document.getElementById("loginBox").style.display = "none";
-
-        document.getElementById("painel").style.display = "block";
-
-    } else {
-
-        document.getElementById("erroSenha").style.display = "block";
-
-    }
-
-});
-
-
-/* ================================
-   MOSTRAR / OCULTAR SENHA
-================================ */
-
-document.getElementById("toggleSenha").addEventListener("click", function () {
-
-    const campo = document.getElementById("senhaInput");
-
-    if (campo.type === "password") {
-
-        campo.type = "text";
-
-        this.textContent = "🙈";
-
-    } else {
-
-        campo.type = "password";
-
-        this.textContent = "👁️";
-
-    }
-
-});
-
-
-/* ================================
-   CHECKBOXES
-================================ */
-
-function ativar(checkId, statusId) {
-
-    const check = document.getElementById(checkId);
-
-    const status = document.getElementById(statusId);
-
-    check.addEventListener("change", () => {
-
-        if (check.checked) {
-
-            check.classList.add("ativo");
-
-            status.classList.add("ativo");
-
-        } else {
-
-            check.classList.remove("ativo");
-
-            status.classList.remove("ativo");
-
-        }
-
-    });
-
+/* =====================================
+   AVISO + REDIRECIONAMENTO SEM LOOP
+===================================== */
+const jaRedirecionou =
+    sessionStorage.getItem("terra_gar oa_discord");
+if (jaRedirecionou !== "sim") {
+    sessionStorage.setItem(
+        "terra_gar oa_discord",
+        "sim"
+    );
+    setTimeout(function() {
+        window.location.href =
+            "https://discord.gg/W7yq8xCvsm";
+    }, 3000);
+} else {
+    // Se voltou do Discord,
+    // remove a tela de abertura.
+    document.getElementById("intro").style.display = "none";
 }
-
+/* =====================================
+   SISTEMA DE SENHA
+===================================== */
+document.getElementById("btnEntrar").addEventListener(
+    "click",
+    function() {
+        const senhaDigitada =
+            document.getElementById("senhaInput").value;
+        const senhaCorreta =
+            "TERRADAGAROA";
+        if (senhaDigitada === senhaCorreta) {
+            document.getElementById("loginBox")
+                .style.display = "none";
+            document.getElementById("painel")
+                .style.display = "block";
+        } else {
+            document.getElementById("erroSenha")
+                .style.display = "block";
+        }
+    }
+);
+/* =====================================
+   MOSTRAR / OCULTAR SENHA
+===================================== */
+document.getElementById("toggleSenha").addEventListener(
+    "click",
+    function() {
+        const campo =
+            document.getElementById("senhaInput");
+        if (campo.type === "password") {
+            campo.type = "text";
+            this.textContent = "🙈";
+        } else {
+            campo.type = "password";
+            this.textContent = "👁️";
+        }
+    }
+);
+/* =====================================
+   CHECKBOXES
+===================================== */
+function ativar(checkId, statusId) {
+    const check =
+        document.getElementById(checkId);
+    const status =
+        document.getElementById(statusId);
+    check.addEventListener("change", () => {
+        if (check.checked) {
+            check.classList.add("ativo");
+            status.classList.add("ativo");
+        } else {
+            check.classList.remove("ativo");
+            status.classList.remove("ativo");
+        }
+    });
+}
 ativar("c1", "s1");
 ativar("c2", "s2");
-
-
-/* ================================
-   ABRIR FREE FIRE
-================================ */
-
+/* =====================================
+   FREE FIRE
+===================================== */
 function abrirFFNormal() {
-
     window.location.href =
         "intent://com.dts.freefireth#Intent;scheme=android-app;end";
-
 }
-
-
 function abrirFFMax() {
-
     window.location.href =
         "intent://com.dts.freefiremax#Intent;scheme=android-app;end";
-
 }
-
 </script>
-
 </body>
 </html>
